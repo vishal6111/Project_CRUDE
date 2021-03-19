@@ -6,6 +6,7 @@ public class Student_SetGet {
 	private int rollno;
 	private int age;
 	
+	//Argument Constructor
 	public Student_SetGet(int id, String name, int rollno, int age) {
 		super();
 		this.id = id;
@@ -38,11 +39,9 @@ public class Student_SetGet {
 	public void setAge(int age) {
 		this.age = age;
 	}
-
+	 // To String Method
 	@Override
 	public String toString() {
-		return "   " + id + "   " + name + "   " + rollno + "     " + age + "";
+		return "[" + id + "   " + name + "   " + rollno + "     " + age + "]";
 	}
-	
-	
 }

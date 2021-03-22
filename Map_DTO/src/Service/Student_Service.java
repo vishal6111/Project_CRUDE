@@ -18,7 +18,7 @@ public class Student_Service {
 		return students;
 	}
 	
-	//To delete Value by key
+	//To delete Value by Id
 	public void delete(int key) {
 		students.remove(key);
 	}
@@ -29,19 +29,19 @@ public class Student_Service {
 		System.out.println("[Empty Map]");
 	}
 	
-	//To update Name by key
+	//To update Name by Id
 	public void update_name(int key, String name) {
 		obj=students.get(key);
 		obj.setName(name);
 	}
 	
-	//TO update Age by key
+	//TO update Age by Id
 	public void update_age(int key, int age) {
 		obj=students.get(key);
 		obj.setAge(age);
 	}
 	
-	//TO update Roll No by key
+	//TO update Roll No by Id
 	public void update_rollno(int key, int rollno) {
 		obj=students.get(key);
 		obj.setRollno(rollno);

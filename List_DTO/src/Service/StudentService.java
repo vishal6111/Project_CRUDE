@@ -34,16 +34,30 @@ public class StudentService {
 	}
 	
 	//To Update the student Name
-	public void update_name(int studentId, String studentName) {
+	public void update_name(int studentId, String studentName,List<StudentDto> students) {
 		
-		Sd_Obj=students.get(studentId);
-		Sd_Obj.setName(studentName);
-	}
-	
+		for(StudentDto st_dt : students) { 
+			   if(st_dt.getId().equals(studentId)) { 
+			       //found it!
+				   /*st_dt.setName(studentName);
+				   students.set(studentId, st_dt);*/
+				   System.out.println("HElo......");
+				   }
+			}
+		//return allstudents;
+		}
 	//To Update the student age
-	public void update_age(int studentId,String studentAge) {
-		Sd_Obj=students.get(studentId);
-		Sd_Obj.setAge(studentAge);
-	}
-
+	public void update_age(int studentId,String studentAge,List<StudentDto> students) {
+		for(StudentDto st_dt : students) { 
+			if(st_dt.getId().equals(studentId)) { 
+			       //found it!
+				  // st_dt.setAge(studentAge);
+				/*allstudents.get(studentId).setAge(studentAge);*/
+				System.out.println("Helllo");
+			   }
+			   
+			}
+		}
 }
+
+

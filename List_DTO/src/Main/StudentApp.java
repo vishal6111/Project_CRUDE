@@ -1,6 +1,7 @@
 package Main;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,11 +24,11 @@ public class StudentApp {
 	//To Add the Details
 		public void Add() {
 			System.out.println("Enter the Id ");
-			st_id=sc.nextLine();
+			st_id=sc.next();
 			System.out.println("Enter the Name");
-			st_name=sc.nextLine();
+			st_name=sc.next();
 			System.out.println("Enter the Age");
-			st_age=sc.nextLine();
+			st_age=sc.next();
 			StudentDto st_obj=new StudentDto(st_id,st_name,st_age);
 			students.add(st_obj);
 			printStudentDetails(allstudents);
@@ -74,11 +75,12 @@ public class StudentApp {
 			   switch(input) {
 			   	case 1:
 				   printStudentDetails(allstudents);
-				   System.out.println("Enter Index");
+				   System.out.println("Enter Id");
 				   index=sc.nextInt();
 				   System.out.println("Enter updated name");
 				   st_name=sc.next();
-				   studentResource.update_name(index,st_name);
+				   
+				   studentResource.update_name(index,st_name,allstudents);
 				   allstudents =studentResource.getAllStudent();
 				   printStudentDetails(allstudents);
 				   update();
@@ -86,11 +88,11 @@ public class StudentApp {
 			   
 		   case 2:
 			   printStudentDetails(allstudents);
-			   System.out.println("Enter Index");
+			   System.out.println("Enter ID");
 			   index=sc.nextInt();
 			   System.out.println("Enter updated Age");
 			   st_age=sc.next();
-			   studentResource.update_age(index,st_age);
+			   studentResource.update_age(index,st_age,allstudents);
 			   allstudents =studentResource.getAllStudent();
 			   printStudentDetails(allstudents);
 			   update();
@@ -98,14 +100,15 @@ public class StudentApp {
 			   
 		   case 3:
 			   printStudentDetails(allstudents);
-			   System.out.println("Enter Index");
+			   System.out.println("Enter ID");
 			   index=sc.nextInt();
 			   System.out.println("Enter updated name");
 			   st_name=sc.next();
 			   System.out.println("Enter updated Age");
 			   st_age=sc.next();
-			   studentResource.update_name(index,st_name);
-			   studentResource.update_age(index,st_age);
+			   
+			   studentResource.update_name(index,st_name,allstudents);
+			   studentResource.update_age(index,st_age,allstudents);
 			   allstudents =studentResource.getAllStudent();
 			   printStudentDetails(allstudents);
 			   update();

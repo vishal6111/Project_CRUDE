@@ -112,7 +112,7 @@ public class Student_Main {
 	// TO Delete Student Details 
 	   public void delete() {
 		   System.out.println("What you want to delete");
-		   System.out.println("1. Delete By Key");
+		   System.out.println("1. Delete By Id");
 		   System.out.println("2. Delete all");
 		   System.out.println("3. Back");
 		   
@@ -190,7 +190,7 @@ public class Student_Main {
 			   System.out.println("1. Update All Name");
 			   System.out.println("2. update All Rollno");
 			   System.out.println("3. update All age");
-			   System.out.println("4. Update All by id");
+			   System.out.println("4. update all column by id");
 			   inputValue=ValidInput();
 			   
 			   switch(inputValue) {
@@ -264,7 +264,7 @@ public class Student_Main {
 			printStudentDetails(allstudents);
 	   }
 	 
-	// TO  Student Details in Map 
+	// TO Operation Perform for Student Details in Map 
 	  public void For_Details() {
 		   System.out.println("Enter a Value Which you want to perform operation");
 			System.out.println("1. Insert Value");
@@ -300,8 +300,8 @@ public class Student_Main {
 	
 		// Main - Method
 	  public static void main(String[] args) {
-		Student_Main sm=new Student_Main();
-		sm.For_Details();
+		Student_Main mainObject=new Student_Main();
+		mainObject.For_Details();
 		}
 	
 		// To Print All Student Value
